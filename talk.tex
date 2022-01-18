@@ -164,10 +164,21 @@ Race     & Vehicle & Bicycle \\ \bottomrule
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Latent Semantic Analysis (LSA) + BOW}
+\begin{frame}{Bag of words}
     \begin{figure}
-        \includegraphics[width=1.0\linewidth]{lsa.png}
+        \includegraphics[width=1.0\linewidth]{bow.png}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Latent Semantic Analysis (LSA)}
+    \begin{itemize}
+        \item Bag of Words vectors can have very large dimensions
+        \item Inefficient for large vocabularies
+        \item Compression is required
+            \begin{itemize}
+                \item Singular Value Decomposition (SVD)
+            \end{itemize}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
