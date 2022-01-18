@@ -150,7 +150,7 @@ Race     & Vehicle & Bicycle \\ \bottomrule
 \begin{itemize}
 \item Use \textbf{vectorized representation} words and their distributional properties to extrapolate ratings
 \item \textbf{Correlate} the extrapolation results with real world experiment results.
-\item Check if extrapolated ratings can be used in predicting psycholinguistic variables
+\item Check if extrapolated ratings can be used in \textbf{predicting psycholinguistic variables}
 \end{itemize}
 \end{frame}
 
@@ -189,14 +189,28 @@ Race     & Vehicle & Bicycle \\ \bottomrule
 \begin{block}{LDA and Topic Models}
 Each word in a doc is generated from a probability distribution and the Topic of a word can be derived from the distribution.
 \end{block}
+\end{frame}
+
+\begin{frame}{}
+    \begin{block}{LDA and Topic Models}
+Each word in a doc is generated from a probability distribution and the Topic of a word can be derived from the distribution.
+\end{block}
+\begin{block}{PMI}
+Probability of a word existing given another one is already there. Example: Car chase
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+    \begin{block}{LDA and Topic Models}
+Each word in a doc is generated from a probability distribution and the Topic of a word can be derived from the distribution.
+\end{block}
 \begin{block}{PMI}
 Probability of a word existing given another one is already there. Example: Car chase
 \end{block}
 
 \begin{block}{Skipgram}
-Given a word as input estimates a certain number of neighbors of that word. Can also be used to know which words have a higher probability of being together. (Word2Vec vectors with Skipgram)
+Given a word as input estimates a certain number of neighbors of that word. Can also be used to know which words have a higher probability of being together. (Word2Vec vectors with Skipgram \cite{p1})
 \end{block}
-
 \end{frame}
 
 % ---------------- extrapolation
@@ -244,22 +258,22 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
                 \item Logarithmic and Semantic models which do not use word vectors
             \end{itemize}
         \item Window size of 5 for Skipgram
-        \item 100 esitmators in the random forest model
+        \item 100 estimators in the random forest model
     \end{itemize}
 \end{frame}
 
 \section{Results}
 \begin{frame}{Results}
 \begin{itemize}
-    \item For all variable ratingsm kNN is the best performing model
+    \item For all variable ratings kNN is the best performing model
     \item Random Forest results are close to kNN
-    \item Especially for Correctness and Affective ratings, the baseline performance is poor
+    \item Especially for correctness and affective ratings, the baseline performance is poor
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Results}
 \begin{itemize}
-    \item However kNN and Random Forest suffer in Affective rating exptrapolation
+    \item However kNN and Random Forest suffer in affective rating extrapolation
     \item Best correlation score being 0.694 whereas for correctness and AoA they score well above 0.720
 \end{itemize}
 \end{frame}
@@ -269,9 +283,9 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
     \item Extrapolated ratings show significant variance from the actual ratings
     \begin{itemize}
         \item Ratings were compared against BLP, ELP ratings
-        \item Especially in Affective ratings (0.67 in Valence against BLP)
+        \item Especially in affective ratings (0.67 in Valence against BLP)
     \end{itemize}
-    \item Authors suspect artefacts in the exptrapolation procedure
+    \item Authors suspect artefacts in the extrapolation procedure
 \end{itemize}
 \end{frame}
 
@@ -294,13 +308,13 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
 %------------------------------------------------
 \begin{frame}{Summary}
     \begin{itemize}
-        \item Distributional features can be used to extrapolate psycholonguistic variable ratings
+        \item Distributional features can be used to extrapolate psycholinguistic variable ratings
         \item kNN and Random Forest with vector based word representations perform better
         \item However there was no concrete answer to the original goal
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Reflection}
+\begin{frame}{Critical Reflection}
     \begin{itemize}
         \item Motivation for the corpus
         \item Why kNN and Random Forest
@@ -309,9 +323,11 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
         \item Dimension of the skipgram vectors
         \item Motivation for the Baseline models
         \item Precise definition of Correlation
+        \item Why only AoA for dichotomization and binning
     \end{itemize}
 \end{frame}
 
+\section{Questions}
 \begin{frame}{Question 1}
     \begin{itemize}
         \item  The author mentioned that “ Our analyses clearly show that reporting the correlation between the original and the extrapolated variables is not sufficient to evaluate their usefulness.” Do you think this is due to the experimental design ?
@@ -332,7 +348,7 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
 
 
 %------------------------------------------------
-
+\section{Wrap up}
 \begin{frame}
 \frametitle{References}
 \footnotesize{
@@ -347,7 +363,7 @@ Given a word as input estimates a certain number of neighbors of that word. Can 
 %------------------------------------------------
 
 \begin{frame}
-\Huge{\centerline{The End}}
+\Huge{\centerline{Thank you!}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
